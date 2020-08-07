@@ -2,9 +2,9 @@
 <CoverageSession>
   <Summary numSequencePoints="67" visitedSequencePoints="6" numBranchPoints="26" visitedBranchPoints="0" sequenceCoverage="8.95" branchCoverage="0" maxCyclomaticComplexity="23" minCyclomaticComplexity="17" visitedClasses="1" numClasses="10" visitedMethods="2" numMethods="19" />
   <Modules>
-    <Module hash="8DAEF741-7A58-4771-96B6-DDE09055FAA5">
+    <Module hash="C3A355EA-75C5-443E-B5B7-91B26EBD8F4D">
       <ModulePath>DevOpsCI.Client.Views.dll</ModulePath>
-      <ModuleTime>2020-08-07T03:04:00</ModuleTime>
+      <ModuleTime>2020-08-07T04:12:34</ModuleTime>
       <ModuleName>DevOpsCI.Client.Views</ModuleName>
       <Files>
         <File uid="1" fullPath="/home/kyle/revature/wk4/DevOpsCI.Client/Views/Home/Index.cshtml" />
@@ -148,9 +148,9 @@
         </Class>
       </Classes>
     </Module>
-    <Module hash="80750C52-14FF-477E-8850-19AF535D1FFC">
+    <Module hash="770C5DCF-BE86-47AB-9D29-253012A366CD">
       <ModulePath>DevOpsCI.Client.dll</ModulePath>
-      <ModuleTime>2020-08-07T03:04:00</ModuleTime>
+      <ModuleTime>2020-08-07T04:12:34</ModuleTime>
       <ModuleName>DevOpsCI.Client</ModuleName>
       <Files>
         <File uid="6" fullPath="/home/kyle/revature/wk4/DevOpsCI.Client/Program.cs" />
