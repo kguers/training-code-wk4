@@ -15,14 +15,14 @@ jobs:
           steps:
                - uses: actions/checkout@v2.3.1
                - run: dotnet tool install --global dotnet-sonarscanner --version 4.10.0
-               - run: | #pipe is multi-line value each ending with \n; > is multi-line value as 1 line
+               - run: | 
                     dotnet sonarscanner begin -o:'kguers' -k:'kguers_training-code-wk4' -d:sonar.login='064daeeda3fc032eed41a03552d337bf81216545' -d:sonar.host.url='https://sonarcloud.io/'
                     dotnet build
                     dotnet test -p:CollectCoverage=true
                     dotnet sonarscanner end -d:sonar.login='064daeeda3fc032eed41a03552d337bf81216545'
                env:
                     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+#pipe is multi-line value each ending with \n; > is multi-line value as 1 line
      # package:
      # deploy:
 
