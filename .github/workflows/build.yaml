@@ -22,7 +22,20 @@ jobs:
                          dotnet sonarscanner end -d:sonar.login='064daeeda3fc032eed41a03552d337bf81216545'
                     env: 
                          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-     # package:
+     package:
+          env:
+               DOCKER_LOGIN: ${{ secrets.DOCKER_LOGIN}}
+               DOCKER_DOCKER: ${{ secrets.DOCKER_DOCKER}}
+          needs: [analyze]
+          runs-on: ubuntu-20.04
+          steps:
+             -    uses: actions/checkout@v2.3.1
+             -    run: echo ${DOCKER_TOKEN} | docker login --username ${DOCKER_LOGIN} --password-stdin
+             -    run: docker image build -f dockerfile -t devopsci .
+             -    run: docker tag devopsci kguers/devopsci
+             -    run: docker image push kguers/devopsci
+             -    run: docker logout
+     
      # deploy:
 
 name: cibuild
